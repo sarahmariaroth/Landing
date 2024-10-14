@@ -105,23 +105,6 @@ jobs:
       - name: Stop and remove Docker container
         run: docker stop test-container && docker rm test-container
 
-  upload:
-    needs: test
-    runs-on: ubuntu-latest
-    if: success()
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      # Log into Docker registry
-      - name: Log into registry ${{ env.REGISTRY }}
-        uses: docker/login-action@343f7c4344506bcbf9b4de18042ae17996df046d # v3.0.0
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
       # Push Docker image if tests pass
       - name: Build and push Docker image
         id: build-and-push
