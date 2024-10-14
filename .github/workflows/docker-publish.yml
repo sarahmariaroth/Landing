@@ -33,7 +33,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Specify the Node.js version
+          node-version: '22'  # Specify the Node.js version
 
       - name: Install dependencies
         run: npm install
@@ -77,7 +77,7 @@ jobs:
 
       # Run the Docker container
       - name: Run Docker container
-        run: docker run -d -p 3000:3000 --name test-container ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.build.outputs.digest }}
+        run: docker run -d -p 3000:3000 --name test-container ${{ env.REGISTRY }}/${{ env.IMAGE_NAME | toLowerCase}}:${{ steps.build.outputs.digest }}
 
       - name: Wait for container to be ready
         run: |
