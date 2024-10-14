@@ -70,7 +70,7 @@ jobs:
         with:
           context: .
           push: false
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: "test"
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
@@ -79,7 +79,7 @@ jobs:
         run: INPUT=${{ env.IMAGE_NAME }}; echo "VAR_LOWERCASE=${INPUT,,}">>${GITHUB_OUTPUT}
       # Run the Docker container
       - name: Run Docker container
-        run: docker run -d -p 3000:3000 --name test-container ${{ env.REGISTRY }}/${{steps.convert2lowercase.outputs.VAR_LOWERCASE}}:${{ steps.build.outputs.digest }}
+        run: docker run -d -p 3000:3000 --name test-container ${{ env.REGISTRY }}/${{steps.convert2lowercase.outputs.VAR_LOWERCASE}}:test
 
       - name: Wait for container to be ready
         run: |
