@@ -68,9 +68,10 @@ jobs:
         id: build
         uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09 # v5.0.0
         with:
+          load: true
           context: .
           push: false
-          tags: "test"
+          tags: "hypercookie/landing:test"
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
@@ -79,7 +80,7 @@ jobs:
         run: INPUT=${{ env.IMAGE_NAME }}; echo "VAR_LOWERCASE=${INPUT,,}">>${GITHUB_OUTPUT}
       # Run the Docker container
       - name: Run Docker container
-        run: docker run -d -p 3000:3000 --name test-container test
+        run: docker run -d -p 3000:3000 --name test-container hypercookie/landing:test
 
       - name: Wait for container to be ready
         run: |
