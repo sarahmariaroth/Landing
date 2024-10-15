@@ -1,8 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended", "group:recommended"]
-  
+    "config:recommended", "group:recommended"
+  ],
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch"],
