@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    darkMode: 'media',
     content: ["./src/*.{html,js}"],
     theme: {
         extend: {
@@ -49,7 +50,7 @@ module.exports = {
             // The foreground colors of the pattern
             colors: {
                 default: "#9C92AC",
-                "blue-dark": "#000044", //also works with rgb(0,0,205)
+                "blue-dark": "#323232", //also works with rgb(0,0,205)
             },
 
             // The foreground opacity

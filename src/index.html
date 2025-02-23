@@ -23,24 +23,24 @@
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://mlrjs.de"/>
 </head>
-<body class="bg-hero-topography overflow-x-hidden cursor-crosshair select-none">
-<script type="module" src="script.js"></script>
+<body class="bg-hero-topography overflow-x-hidden cursor-crosshair select-none dark:bg-hero-topography-blue-dark-100 dark:bg-gray-900 dark:text-white">
+<script type="module" src="script.js" defer></script>
 <div
         class="max-w-screen relative h-screen max-h-screen w-screen overflow-hidden lg:flex lg:flex-row"
 >
     <div
             class="lg:min-w-1/2 lg:max-w-1/2 lg:relative absolute inset-0 flex  items-center justify-center lg:w-1/2 flex-col"
     >
-        <h1 class="font-space text-9xl text-white lg:text-black">
+        <h1 class="font-space text-9xl text-white dark:text-white  lg:text-black">
             Hey,
         </h1>
-        <p class="font-space text-3xl text-white lg:text-black">
+        <p class="font-space text-3xl text-white text-center dark:text-white  lg:text-black">
             <br>
             I am Jannes from Konstanz Germany.<br>
             Most of my time I work as a full stack developer.<br>
             Sometimes I also have to study for my Masters in Computer Science.
         </p>
-        <div class="font-space text-base text-white lg:text-black flex-row gap-20 mt-3 hidden lg:flex">
+        <div class="font-space text-base text-white dark:text-white lg:text-black flex-row gap-20 mt-3 hidden lg:flex">
             <div class="cursor-cell" onclick="window.location.href = 'https://github.com/Hypercookie'">
                 > Github
             </div>
@@ -61,7 +61,7 @@
     </div>
     <div class="lg:min-w-3/5 absolute lg:relative inset-0 flex  items-center justify-center lg:w-3/5 -z-50">
         <svg
-                class="min-w-[200%] lg:min-w-[100%]"
+                class="min-w-[150%] lg:min-w-[100%]"
                 viewBox="0 0 200 200"
         >
             <defs>
@@ -85,23 +85,22 @@
     </div>
     <div class="absolute bottom-5 w-screen">
         <div class="w-screen flex justify-center items-center">
-            <svg class="h-10 cursor-cell" xmlns="http://www.w3.org/2000/svg" version="1.1" width="256" onclick="window.location.href= '#Experience'"
+            <svg class="h-10 cursor-cell fill-current stroke-current dark:text-white" xmlns="http://www.w3.org/2000/svg" version="1.1" width="256"
+                 onclick="window.location.href= '#Experience'"
                  height="256" viewBox="0 0 256 256" xml:space="preserve">
-
-<defs>
-</defs>
+                  <defs></defs>
                 <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
                    transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
-	<path d="M 90 24.25 c 0 -0.896 -0.342 -1.792 -1.025 -2.475 c -1.366 -1.367 -3.583 -1.367 -4.949 0 L 45 60.8 L 5.975 21.775 c -1.367 -1.367 -3.583 -1.367 -4.95 0 c -1.366 1.367 -1.366 3.583 0 4.95 l 41.5 41.5 c 1.366 1.367 3.583 1.367 4.949 0 l 41.5 -41.5 C 89.658 26.042 90 25.146 90 24.25 z"
-          style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-          transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
-</g>
-</svg>
+                     <path d="M 90 24.25 c 0 -0.896 -0.342 -1.792 -1.025 -2.475 c -1.366 -1.367 -3.583 -1.367 -4.949 0 L 45 60.8 L 5.975 21.775 c -1.367 -1.367 -3.583 -1.367 -4.95 0 c -1.366 1.367 -1.366 3.583 0 4.95 l 41.5 41.5 c 1.366 1.367 3.583 1.367 4.949 0 l 41.5 -41.5 C 89.658 26.042 90 25.146 90 24.25 z"
+                           style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: currentColor; fill-rule: nonzero; opacity: 1;"
+                           transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+                  </g>
+               </svg>
         </div>
     </div>
 </div>
 <div class="min-h-screen h-screen overflow-hidden" id="Experience">
-    <h1 class="font-space text-9xl text-black ml-6 mt-6">
+    <h1 class="font-space text-9xl dark:text-white  text-black ml-6 mt-6">
         Experience
     </h1>
     <div class="flex flex-col h-screen items-center justify-center">
@@ -109,7 +108,8 @@
             <div class="text-6xl text-blue_scale-600">Java Development</div>
             <div class="text-base">2023 - today</div>
             <div class="text-4xl">
-                Java Development for <a href="https://www.knime.com/" class="transition ease-in-out hover:text-knime-yellow">ΔKNIME</a> Konstanz.
+                Java Development for <a href="https://www.knime.com/"
+                                        class="transition ease-in-out hover:text-knime-yellow">ΔKNIME</a> Konstanz.
             </div>
         </div>
         <div class="flex flex-col w-9/12 mb-20 ml-20">
@@ -119,13 +119,13 @@
                 Full Stack Development for a University of Konstanz research project.
             </div>
         </div>
-<!--        <div class="flex flex-col w-9/12 mb-20 ml-20">-->
-<!--            <div class="text-6xl text-blue_scale-600">Mobile Application Development</div>-->
-<!--            <div class="text-base">2022 - 2023</div>-->
-<!--            <div class="text-4xl">-->
-<!--                Developing Mobile Applications in React Native for Join-Up-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div class="flex flex-col w-9/12 mb-20 ml-20">-->
+        <!--            <div class="text-6xl text-blue_scale-600">Mobile Application Development</div>-->
+        <!--            <div class="text-base">2022 - 2023</div>-->
+        <!--            <div class="text-4xl">-->
+        <!--                Developing Mobile Applications in React Native for Join-Up-->
+        <!--            </div>-->
+        <!--        </div>-->
         <div class="flex flex-col w-9/12 mb-20 ml-20">
             <div class="text-6xl text-blue_scale-600">Full Stack Development</div>
             <div class="text-base">2022</div>
@@ -136,12 +136,17 @@
     </div>
 </div>
 <footer class="text-black py-4">
-    <div class="max-w-screen mx-auto text-center flex items-center justify-center space-x-2">
-        <p class="font-space text-base">© <script>document.write(new Date().getFullYear());</script> Jannes Müller. All rights reserved.</p>
+    <div class="max-w-screen mx-auto text-center flex items-center dark:text-white justify-center space-x-2">
+        <p class="font-space text-base">
+            ©
+            <script>document.write(new Date().getFullYear());</script>
+            Jannes Müller. All rights reserved.
+        </p>
         <p class="font-space text-base">Proudly deployed on a NixOS machine.</p>
         <a href="https://nixos.org/" target="_blank" class="flex items-center">
             <span class="mr-1">❤️</span>
-            <img src="https://raw.githubusercontent.com/NixOS/nixos-artwork/refs/heads/master/logo/nix-snowflake-colours.svg" alt="NixOS Logo" class="h-6 w-6 mr-1"/>
+            <img src="https://raw.githubusercontent.com/NixOS/nixos-artwork/refs/heads/master/logo/nix-snowflake-colours.svg"
+                 alt="NixOS Logo" class="h-6 w-6 mr-1"/>
         </a>
     </div>
 </footer>
