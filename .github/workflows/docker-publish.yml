@@ -76,7 +76,7 @@ jobs:
           load: true
           context: .
           push: false
-          tags: "hypercookie/landing:test"
+          tags: "sarahmariaroth/landing:test"
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
@@ -85,7 +85,7 @@ jobs:
         run: INPUT=${{ env.IMAGE_NAME }}; echo "VAR_LOWERCASE=${INPUT,,}">>${GITHUB_OUTPUT}
       # Run the Docker container
       - name: Run Docker container
-        run: docker run -d -p 3000:3000 --name test-container hypercookie/landing:test
+        run: docker run -d -p 3000:3000 --name test-container sarahmariaroth/landing:test
 
       - name: Wait for container to be ready
         run: |

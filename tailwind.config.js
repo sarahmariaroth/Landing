@@ -49,8 +49,8 @@ module.exports = {
 
             // The foreground colors of the pattern
             colors: {
-                default: "#9C92AC",
-                "blue-dark": "#323232", //also works with rgb(0,0,205)
+                default: "#dbc8ff",
+                "blue-dark": "#f6a9ff", //also works with rgb(0,0,205)
             },
 
             // The foreground opacity
