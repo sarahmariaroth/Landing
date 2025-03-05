@@ -51,6 +51,7 @@ module.exports = {
             colors: {
                 default: "#dbc8ff",
                 "blue-dark": "#f6a9ff", //also works with rgb(0,0,205)
+                "dark-purple": "rgb(50, 3, 61)",
             },
 
             // The foreground opacity
